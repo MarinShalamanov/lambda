@@ -5,7 +5,7 @@ import com.marinshalamanov.lambda.ast.Application;
 import com.marinshalamanov.lambda.ast.LambdaExpression;
 import com.marinshalamanov.lambda.ast.Variable;
 
-public class EtaReductor {
+public class EtaReductor extends Reductor {
 	
 	/**
 	 * Performs a single step of beta reduction.

@@ -14,7 +14,8 @@ class EtaRectorTest {
 	void test() {
 		LambdaExpression e1 = new ASTParser().parse("\\x.@fx");
 		LambdaExpression expected = new ASTParser().parse("f");
-		assertEquals(expected, EtaReductor.fullEtaReduce(e1));
+		EtaReductor eta = new EtaReductor();
+		assertEquals(expected, eta.fullReduce(e1));
 	}
 
 }

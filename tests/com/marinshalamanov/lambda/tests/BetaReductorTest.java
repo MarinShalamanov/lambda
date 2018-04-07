@@ -12,7 +12,8 @@ class BetaReductorTest {
 
 	@Test
 	void test() {
-		LambdaExpression omegaReduced = BetaReductor.fullBetaReduce(Combinators.omega());
+		BetaReductor beta = new BetaReductor();
+		LambdaExpression omegaReduced = beta.fullReduce(Combinators.omega());
 		
 		assertTrue(omegaReduced.alphaEquivalent(Combinators.omega()));
 	}

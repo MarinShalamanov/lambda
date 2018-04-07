@@ -2,6 +2,7 @@ package com.marinshalamanov.lambda.ast;
 
 import java.util.Set;
 
+import com.marinshalamanov.lambda.BetaReductor;
 import com.marinshalamanov.lambda.nameless.Converter;
 
 public abstract class LambdaExpression {
@@ -20,6 +21,13 @@ public abstract class LambdaExpression {
 	
 	public boolean alphaEquivalent(LambdaExpression expr) {		
 		return Converter.flat(this).equals(Converter.flat(expr));
+	}
+	
+	public boolean betaEquivalent(LambdaExpression expr) {
+		// TODO: Proof implementation is correct
+		LambdaExpression thisReduced = BetaReductor.fullBetaReduce(this);
+		LambdaExpression exprReduced = BetaReductor.fullBetaReduce(expr);
+		return thisReduced.alphaEquivalent(exprReduced);
 	}
 	
 }

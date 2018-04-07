@@ -8,14 +8,6 @@ import com.marinshalamanov.lambda.nameless.Converter;
 
 public class Main {
 	public static void main(String[] args) {
-		Variable x = new Variable('x');
-		Variable y = new Variable('y');
-
-		Variable z = new Variable('z');
 		
-		LambdaExpression e = new Application(new Application(y, new Abstraction(x, new Application(new Application(x, y), z))), z);
-		System.out.println(e);
-		
-		System.out.println(new Converter().flat(e));
 	}
 }

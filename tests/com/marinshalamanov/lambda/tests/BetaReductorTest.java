@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.marinshalamanov.lambda.BetaReductor;
 import com.marinshalamanov.lambda.Combinators;
 import com.marinshalamanov.lambda.ast.LambdaExpression;
+import com.marinshalamanov.lambda.reductions.BetaReductor;
 
 class BetaReductorTest {
 
